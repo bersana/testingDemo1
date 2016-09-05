@@ -17,7 +17,7 @@ before_script:
   - sleep 5
   
 script:
-  - php vendor/codeception/codeception/codecept run unit --coverage-xml --env travis
+  - php vendor/codeception/codeception/codecept run unit --coverage-xml
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
