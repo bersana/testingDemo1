@@ -4,13 +4,7 @@
     "type": "project",
     "description": "Symfony Demo Application",
     "autoload": {
-        "psr-4": {
-            "": "src/"
-        },
-        "classmap": [
-            "app/AppKernel.php",
-            "app/AppCache.php"
-        ]
+        "psr-0": { "": "src/", "SymfonyStandard": "app/" },
     },
     "require": {
         "php": ">=5.5.9",
