@@ -2,5 +2,4 @@ class_name: UnitTester
 modules:
     enabled:
         - Asserts
-        - Symfony2
         - \AppBundle\Helper\Unit
