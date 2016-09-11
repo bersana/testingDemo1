@@ -1,6 +1,6 @@
 actor: Tester
 paths:
-    tests: tests
+    tests: src/AppBundle/tests
     log: tests/_output
     data: tests/_data
     support: tests/_support
