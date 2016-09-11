@@ -9,11 +9,13 @@ install:
   - composer global require "fxp/composer-asset-plugin:~1.1.1"
   - composer install
 
-script:
-  - php vendor/bin/codecept run unit --coverage-xml --env travis
 
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - java -jar selenium-server-standalone-2.42.2.jar -port 4444 &
-  - sleep 5
+  - php app/console doctrine:schema:create -n
+  - php app/console doctrine:fixtures:load -n
+  - php app/console doctrine:schema:create -n --env test
+  - php app/console doctrine:fixtures:load -n --env test
+  - php app/console server:start
+
+script:
+  - php bin/codecept run
