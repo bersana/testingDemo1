@@ -18,5 +18,5 @@ before_script:
   - php bin/console server:start
 
 script:
-  - php vendor/codeception/codeception/codecept run acceptance
-  - php vendor/codeception/codeception/codecept run src/AppBundle/unit
+  - php vendor/codeception/codeception/codecept run 
+  
