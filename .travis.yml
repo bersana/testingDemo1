@@ -18,4 +18,4 @@ before_script:
   - php bin/console server:start
 
 script:
-  - php bin/codecept run
+  - php vendor/bin/codecept run
