@@ -19,3 +19,4 @@ before_script:
 
 script:
   - php vendor/codeception/codeception/codecept run acceptance
+  - php vendor/codeception/codeception/codecept run unit
